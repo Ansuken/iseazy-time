@@ -1,0 +1,58 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.disclaimer {
+    background: var(--secondary-color);
+    margin: 10px;
+    padding: 10px; 
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.monthView {
+    height: 100%;
+    width: 100%;
+}
+
+.monthTitle {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin: 10px;
+    padding: 10px; 
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    color: white;
+    align-items: center;
+}
+.monthText {
+    text-transform: capitalize;
+    font-size: 24px;
+}
+.monthChange {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.monthChangeArrow {
+    cursor: pointer;
+
+}
+.monthChange span:hover {
+    color: var(--tertiary-color);
+}
+.emptySheet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+}

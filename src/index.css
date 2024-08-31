@@ -1,0 +1,73 @@
+:root {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  font-weight: 400;
+
+  background-color: #f8f8f8;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: #f1217e;
+  --secondary-color: #8e39a3;
+  --tertiary-color: #ffef5f;
+
+  --base-color: #333333;
+  --base-color-low: #666666;
+
+  --border-color: #dddddd;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --box-shadow-intense: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  --success-color: #00b300;
+  --error-color: #ff0000;
+
+
+  color: var(--base-color);
+}
+
+body {
+  margin: 0 auto;
+}
+
+a {
+  all: unset;
+}
+
+img {
+  height: 100%;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.success {
+  color: var(--success-color);
+}
+
+.error {
+  color: var(--error-color);
+}

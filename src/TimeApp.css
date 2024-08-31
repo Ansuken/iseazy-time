@@ -1,0 +1,31 @@
+.mainApp {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.header {
+    height: 32px;
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    height: 100%;
+    cursor: pointer;
+}
+
+.configButton {
+    display: flex;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.configButton:hover {
+    color: var(--primary-color);
+}

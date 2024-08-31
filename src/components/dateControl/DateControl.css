@@ -1,0 +1,25 @@
+.dateControl {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inputControl {
+    font-family: inherit;
+    border-radius: 8px;
+    border: none;
+    font-size: 24px;
+    color: var(--base-color-low);
+}
+.manualSetButton {
+    cursor: pointer;
+    color: var(--base-color);
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+}
+
+.manualSetButton:hover {
+    opacity: 1;
+    color: var(--primary-color);
+}

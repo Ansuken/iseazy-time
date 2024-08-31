@@ -1,0 +1,16 @@
+.monthResultWrapper {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.monthResultTitle {
+    font-size: 1rem;
+    color: var(--base-color);
+}
