@@ -1,7 +1,12 @@
 import './Button.css'
 
-export const Button = ({title, onClick}: {title: string, onClick: () => void}) => {
+type ButtonProps = {
+    title: string
+    onClick: () => void
+    disabled?: boolean
+}
+export const Button = ({title, onClick, disabled}: ButtonProps) => {
     return (
-        <button className="button" onClick={onClick}>{title}</button>
+        <button className={`button ${disabled && 'buttonDisabled'}`} onClick={onClick} disabled={disabled}>{title}</button>
     )
 }

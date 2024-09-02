@@ -1,7 +1,5 @@
 import { getLongDays } from "./Storage";
 
-const longDays = getLongDays()
-
 export const getFormattedDate = (date: Date) => {
     const options: Intl.DateTimeFormatOptions = { weekday: 'long', day: 'numeric' };
     return date.toLocaleDateString('es-ES', options);
@@ -14,6 +12,7 @@ export const isWeekend = (date: Date) => {
 
 export const isLongDay = (date: Date) => {
     const day = date.getDay();
+    const longDays = getLongDays()
     return longDays.includes(day);
 }
 

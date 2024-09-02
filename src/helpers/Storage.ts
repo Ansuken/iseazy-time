@@ -86,6 +86,8 @@ export const getSchedule = (): Schedule => {
     return schedule
 }
 
+export const hasDisclaimer = () => !hasLongDays() || !hasBreaksTime() || !hasSchedule()
+
 export const hasLongDays = (): boolean => {
     const longDays = getLongDays()
     return longDays.length >= 2
@@ -93,10 +95,12 @@ export const hasLongDays = (): boolean => {
 
 export const hasBreaksTime = (): boolean => {
     const breaksTime = getBreaksTime()
+    if (!breaksTime) return false
     return breaksTime.shortBreak > 0 && breaksTime.longBreak > 0
 }
 
 export const hasSchedule = (): boolean => {
     const schedule = getSchedule()
-    return !!schedule.shortDay.start && !!schedule.shortDay.end && !!schedule.longDay.start && !!schedule.longDay.end
+    if (!schedule) return false
+    return !!schedule.shortDay?.start && !!schedule.shortDay?.end && !!schedule.longDay?.start && !!schedule.longDay?.end
 }

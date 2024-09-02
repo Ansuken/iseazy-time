@@ -11,3 +11,13 @@
 .button:hover {
     background: var(--secondary-color);
 }
+
+.buttonDisabled {
+    background: var(--base-color-low);
+    color: white;
+    cursor: not-allowed;
+}
+
+.buttonDisabled:hover {
+    background: var(--base-color-low);
+}
