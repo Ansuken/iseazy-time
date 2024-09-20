@@ -9,7 +9,7 @@
     font-family: inherit;
     border-radius: 8px;
     border: none;
-    font-size: 24px;
+    font-size: 16px;
     color: var(--base-color-low);
 }
 .manualSetButton {

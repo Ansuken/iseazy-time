@@ -54,10 +54,9 @@
 .dayConcept {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     color: var(--primary-color);
     border: 1px solid #ddd;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 0.5rem;
 }
 

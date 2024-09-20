@@ -2,7 +2,15 @@ import './HomePage.css'
 import { useCallback, useEffect, useState } from "react"
 import { DayFilled } from "../../types/DayFilled"
 import { getMonthName } from "../../helpers/Time"
-import { getCreatedSheet, getSheetFromStorageByDate, getSheetsFromStorage, hasBreaksTime, hasLongDays, hasSchedule } from "../../helpers/Storage"
+import {
+    getCreatedSheet,
+    getSheetFromStorageByDate,
+    getSheetsFromStorage,
+    hasBreaksTime,
+    hasDisclaimer,
+    hasLongDays,
+    hasSchedule
+} from "../../helpers/Storage"
 import { Month } from "../../components/month/Month"
 import { Button } from "../../components/button/Button"
 import { MonthResult } from '../../components/monthResult/MonthResult'
@@ -51,8 +59,6 @@ export const HomePage = () => {
         localStorage.setItem('sheets', JSON.stringify(sheets.concat(newSheet)))
     }
 
-    const hasDisclaimer = () => !hasLongDays() || !hasBreaksTime() || !hasSchedule()
-
     useEffect(() => 
         setSheet(getSheetFromStorage())
     , [year, month, getSheetFromStorage])
@@ -83,7 +89,7 @@ export const HomePage = () => {
                     {!sheet || sheet.length === 0 && 
                         <div className="emptySheet">
                             No hay datos para este mes
-                            <Button title="Crear Hoja del mes" onClick={createSheet} />
+                            <Button title="Crear Hoja del mes" onClick={createSheet} disabled={hasDisclaimer()} />
                         </div>
                     }
                 </div>
