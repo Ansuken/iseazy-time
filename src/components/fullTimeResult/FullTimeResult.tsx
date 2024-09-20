@@ -1,12 +1,9 @@
-import { useMemo } from 'react'
 import { getTotalMinutesFromAllSheets } from '../../helpers/TimeCalculations'
 import './FullTimeResult.css'
 
 export const FullTimeResult = () => {
     
-    const fullTimeResult = useMemo(()=>{
-        return getTotalMinutesFromAllSheets()
-    }, [])
+    const fullTimeResult = getTotalMinutesFromAllSheets()
 
     return (
         <div className="fullTimeResultWrapper">
