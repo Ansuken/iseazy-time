@@ -1,10 +1,7 @@
-// Calcular el tiempo total desde principio de la jornada y el fina, es decir cuando entro y cuando salgo
-// Calcular el tiempo de los descansos, tanto el corto como el largo
-// Calcular el tiempo neto de los trabajos restando al total de principio y fin, el tiempo restante de los descansos no disfrutados.
-
 import { Breaks } from "../types/Breaks";
 import { DayFilled } from "../types/DayFilled";
 import { Schedule } from "../types/Schedule";
+import { getSheetsFromStorage } from "./Storage";
 import { convertHHMMToMinutes } from "./Time";
 
 export const getDifferencesBetweenTimes = (startTime: string, endTime: string): string => {
@@ -70,5 +67,11 @@ export const getTotalMinutesFromSheet = ({sheet}: {sheet:DayFilled[]}): number =
         const restTime = getRestTime({day})
         totalMinutes += restTime
     })
+    return totalMinutes
+}
+
+export const getTotalMinutesFromAllSheets = (): number => {
+    const sheets = getSheetsFromStorage()
+    const totalMinutes = getTotalMinutesFromSheet({sheet: sheets}) || 0
     return totalMinutes
 }

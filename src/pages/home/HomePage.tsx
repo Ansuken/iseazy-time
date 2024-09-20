@@ -6,6 +6,7 @@ import { getCreatedSheet, getSheetFromStorageByDate, getSheetsFromStorage, hasBr
 import { Month } from "../../components/month/Month"
 import { Button } from "../../components/button/Button"
 import { MonthResult } from '../../components/monthResult/MonthResult'
+import { FullTimeResult } from '../../components/fullTimeResult/FullTimeResult'
 
 export const HomePage = () => {
     const storedMonth = localStorage.getItem('month') ?? new Date().getMonth().toString()
@@ -71,6 +72,7 @@ export const HomePage = () => {
                 <div className="monthTitle">
                     <div className="monthText">{getMonthName(month)} {year}</div>
                     <div className="monthChange">
+                        <FullTimeResult />
                         <MonthResult month={month} year={year} />
                         <span className="monthChangeArrow material-symbols-outlined" onClick={() => handleMonthChange(false)}>chevron_left</span>
                         <span className="monthChangeArrow material-symbols-outlined" onClick={() => handleMonthChange(true)}>chevron_right</span>
